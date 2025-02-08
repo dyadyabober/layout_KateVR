@@ -1,7 +1,14 @@
-@import 'utils';
-@import 'fonts';
-@import 'typography';
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "reset";
+@import "base";
+@import "layout/layout";
+@import "components/components";
+@import "for-js";
+@import "modal";
 
-body {
-  background: $c-gray;
+.page {
+  display: flex;
+  flex-direction: column;
 }

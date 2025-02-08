@@ -1,4 +1,44 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+
 %h1 {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
+  font-weight: 900;
+  font-size: 4.6rem;
+  line-height: 130%;
+}
+
+%h2 {
+  font-weight: 900;
+  font-size: 3.6rem;
+  line-height: auto;
+}
+
+%h3 {
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: auto;
+}
+
+%text-1 {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: $color-grey-light;
+}
+
+%text-2 {
+  font-size: 1.4rem;
+  line-height: auto;
+}
+
+%text-custom {
+  font-family: Quantum;
+}
+
+%triangle {
+  width: 9px;
+  height: 6px;
+  background-color: $color-blue;
+  clip-path: polygon(50% 0, 100% 100%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 0 100%);
+  -moz-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 0 100%);
+  transform: rotate(-180deg);
 }

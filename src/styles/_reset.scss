@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul,
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  @include hover((color, text-decoration), ($color-blue, underline));
+}
+
+::selection {
+  background-color: $select-color;
+  color: $color-green;
+}
+
+.not-link {
+  text-decoration: none;
+}

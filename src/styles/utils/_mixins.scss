@@ -1,6 +1,11 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
+@mixin hover($properties, $values) {
+  transition: #{list.join($properties, "0.3s, ")} 0.3s;
   &:hover {
-    #{$_property}: $_toValue;
+    @for $i from 1 through length($properties) {
+      $property: list.nth($properties, $i);
+      $value: list.nth($values, $i);
+
+      #{$property}: $value;
+    }
   }
 }

@@ -1,0 +1,132 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* затемнение фона */
+  z-index: 1000;
+  display: none; /* изначально скрыто */
+  // opacity: 0;
+  // visibility: hidden;
+}
+
+.modal-overlay.active {
+  display: block; /* показываем модальное окно */
+  // opacity: 1;
+  // visibility: visible;
+  // transition: opacity 0.3s ease-in-out;
+}
+
+.faq-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1a2e; /* основной цвет модального окна */
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto; /* прокрутка */
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1100; /* выше, чем затемнение */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff5757; /* эффект наведения */
+}
+
+
+.main-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.main-heading span {
+  display: block;
+  font-size: 24px;
+  color: #05C2DF;
+}
+
+.sub-heading {
+  font-size: 24px;
+  font-weight: 500;
+  color: #05C2DF;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border: 1px solid #05c2df;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.faq-item:hover {
+  background: rgba(5, 194, 223, 0.1);
+}
+
+.faq-item .question {
+  font-size: 16px;
+  font-weight: 400;
+  color: #05C2DF;
+  margin-bottom: 18px;
+}
+
+.faq-item .answer {
+  font-size: 16px;
+  line-height: 24px;
+  color: #929292;
+}
+
+.faq-item .updated {
+  font-size: 14px;
+  line-height: 21px;
+  color: #545454;
+}
+
+.faq-item .answer,
+.faq-item .updated {
+  display: none;
+}
+
+.faq-item.open .answer,
+.faq-item.open .updated {
+  display: block;
+}
+
+.faq-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  margin: 20px auto 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #05C2DF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.faq-more:hover {
+  opacity: 0.8;
+}
