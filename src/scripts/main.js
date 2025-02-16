@@ -15,6 +15,8 @@ import useSliders from './sliders/sliders';
 
 import useModal from './modal/modal';
 
+import usePaymentNavigation from './buy-menu/buy-menu';
+
 
 function Page() {
   /*                    SCROLL TO TOP BUTTON                              */
@@ -42,9 +44,13 @@ function Page() {
   useAboutUsVideoPopupHandlers();
   useHeaderVideoPopupHandlers();
 
-  /*                             FaqModal                                           */
+  /*                             MODAL                                           */
 
   useModal();
+
+  /*                             BUY-MENU                                           */
+
+  usePaymentNavigation();
 }
 
 export default Page;

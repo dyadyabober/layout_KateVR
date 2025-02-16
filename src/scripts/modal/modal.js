@@ -1,8 +1,9 @@
 import useFaqModal from './faq/faq';
-// import ... from './help/help';
+import useHelpModal from './help/help';
 
 function useModal() {
   useFaqModal();
+  useHelpModal();
 }
 
 export default useModal;

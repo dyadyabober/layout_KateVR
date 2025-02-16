@@ -54,7 +54,7 @@
 
   &__lang-switch {
     position: relative;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
@@ -150,9 +150,9 @@
         background-color: transparent;
         border-bottom: 2px solid $color-white;
         padding: 7px;
-        transform: translateY(-50%) 
-          rotate(-45deg) 
-          translateX(-4px) 
+        transform: translateY(-50%)
+          rotate(-45deg)
+          translateX(-4px)
           translate(0, -50%);
       }
 
@@ -219,7 +219,7 @@
 
     & > * {
       margin-left: 8.6rem;
-      
+
       @media only screen and (max-width: 1080px) {
         margin-left: 0;
       }
@@ -376,7 +376,7 @@
       position: absolute;
       left: 50%;
       bottom: -13px;
-      
+
       @extend %triangle;
 
       transform: rotate(-180deg) translateX(50%);

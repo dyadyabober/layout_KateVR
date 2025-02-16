@@ -3,7 +3,7 @@ function useFaqModal() {
   const faqLink = document.querySelector('.header__faq');
 
   if (!faqOverlay || !faqLink) {
-    console.error("FAQ overlay или ссылка не найдены");
+    console.error("The FAQ overlay or link not found");
     return;
   }
 
@@ -22,9 +22,9 @@ function useFaqModal() {
     const arrow = elem.querySelector('.arrow');
     elem.classList.toggle('open');
     if (elem.classList.contains('open')) {
-      arrow.style.transform = 'rotate(90deg)'; // Повернуть стрелку вправо
+      arrow.style.transform = 'rotate(90deg)';
     } else {
-      arrow.style.transform = 'rotate(0deg)'; // Вернуть стрелку вверх
+      arrow.style.transform = 'rotate(0deg)';
     }
   }
 

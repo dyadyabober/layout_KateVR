@@ -137,7 +137,7 @@
             <div class="header__bottom">
               <div class="header__faq-and-help">
                 <a href="#" class="header__faq">FAQ</a>
-                <a href="#get-in-touch" class="header__help">Help</a>
+                <a href="#" class="header__help">Help</a>
               </div>
               <a
                 href="#tech-features"
@@ -801,7 +801,7 @@
             height="315"
             src="https://www.youtube.com/embed/SvTbB19bvIw?enablejsapi=1"
             title="YouTube video player"
-            
+
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           >
@@ -817,7 +817,7 @@
             height="315"
             src="https://www.youtube.com/embed/unSm97m2FdM?enablejsapi=1"
             title="YouTube video player"
-            
+
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
@@ -926,5 +926,108 @@
       src="index.js"
       defer
     ></script>
+
+    <!-- Help Modal -->
+    <div class="modal-overlay" id="helpOverlay">
+      <div class="help-modal">
+        <button class="close-btn" onclick="closeHelp()">×</button>
+
+        <h2><b>HOW CAN WE</b> <span>HELP</span> <b>YOU?</b></h2>
+
+        <div class="help-text">
+        Welcome to our help center. Our goal is to make the process of<br>
+        getting acquainted and purchase as easy and pleasant as possible. Need help with your KAT<br>
+        VR loco product? Many product questions can be resolved by reviewing our Product Support<br>
+          <a href="#">FAQs</a>.<br><br>
+
+        Please also feel free to <a href="#">Contact Us</a> directly should you need anything further. We’re happy to help.
+        </div>
+
+        <div class="help-links">
+              Instruction manual
+          <div class="help-info">+86-0571-86105373</div>
+
+              Where to go for a warranty
+          <div class="help-info">global@katvr.com</div>
+
+              Service Policy
+          <div class="help-info">overseas@katvr.com</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutOverlay">
+      <div class="checkout-modal">
+        <button class="close-btn" onclick="closeCheckout()">×</button>
+
+        <h2><b>KAT VR</b> <span>CHECKOUT</span></h2>
+
+        <!-- Order Section -->
+        <div class="checkout-section" id="placeOrderSection">
+          <h3>Place Order</h3>
+          <div class="product">
+            <img src="./images/header/background.png" alt="KAT VR Product" />
+            <div class="info-row">
+              <div class="info-group">
+                <span class="label">Quantity:</span>
+                <select>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </div>
+              <div class="info-group">
+                <span class="label">Price:</span>
+                <span class="price">1200$</span>
+              </div>
+            </div>
+          </div>
+          <div class="customer-details">
+            <input type="text" placeholder="First Name*" />
+            <input type="text" placeholder="Last Name*" />
+            <input type="email" placeholder="Email*" />
+            <input type="text" placeholder="Phone Number*" />
+            <button class="purchase-btn" onclick="goToPay()">Proceed to Payment</button>
+          </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="checkout-section hidden" id="paySection">
+          <h3>Payment</h3>
+          <div class="product">
+            <img src="./images/header/background.png" alt="KAT VR Product" />
+            <div class="info-row">
+              <div class="info-group">
+                <span class="label">Quantity:</span>
+                <select>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </div>
+              <div class="info-group">
+                <span class="label">Price:</span>
+                <span class="price">1200$</span>
+              </div>
+            </div>
+          </div>
+          <div class="payment-details">
+            <input type="text" placeholder="Card Holder Name*" />
+            <input type="text" placeholder="MM / YY" />
+            <input type="text" placeholder="CVV*" />
+            <button class="purchase-btn" onclick="goToComplete()">Complete Order</button>
+          </div>
+        </div>
+
+        <!-- Order Complete Section -->
+        <div class="checkout-section hidden" id="completeSection">
+          <h3>Order Complete</h3>
+          <p>Thank you for your order! Your order has been placed and is being processed.</p>
+          <button class="back-home-btn">Back to Homepage</button>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
