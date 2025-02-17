@@ -76,11 +76,11 @@
 .help-links {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  column-gap: 30;
-  row-gap: 20px;
+  gap: 20px 30px;
   font-size: 16px;
   color: #05C2DF;
 }
+
 
 .help-info {
   color: #929292;
