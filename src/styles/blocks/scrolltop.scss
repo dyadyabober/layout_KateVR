@@ -1,14 +1,21 @@
 .scrolltop {
+  position: fixed;
+  right: 110px;
+  bottom: 30px;
   display: none;
+  z-index: 100;
 
   @include on-tablet {
+    display: none;
+  }
+
+  &.show {
     display: flex;
   }
 
   &__link {
     width: 48px;
     height: 48px;
-
     background-image: url(../images/scroll.svg);
     background-repeat: no-repeat;
     background-position: center;
