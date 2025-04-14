@@ -5,12 +5,27 @@
   display: none;
   z-index: 100;
 
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+
   @include on-tablet {
-    display: none;
+    position: fixed;
+    right: 34px;
+    bottom: 30px;
+    z-index: 100;
+  }
+
+  @include on-desktop {
+    right: 110px;
   }
 
   &.show {
     display: flex;
+
+    @media (max-width: 767px) {
+      display: none !important;
+    }
   }
 
   &__link {

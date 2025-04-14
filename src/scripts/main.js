@@ -176,13 +176,18 @@ arrowRight.addEventListener('click', function() {
 
 startSlide();
 
-// Scroll
+// Scroll to top button functionality with footer detection
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const footer = document.querySelector('.footer');
 const bottomOffset = 101;
 
 function positionScrollButton() {
   if (!scrollTopBtn || !footer) return;
+
+  if (window.innerWidth < 768) {
+    scrollTopBtn.classList.remove('show');
+    return;
+  }
 
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
   const footerTop = footer.getBoundingClientRect().top + scrollPosition;
@@ -195,7 +200,6 @@ function positionScrollButton() {
       const distanceFromBottom = window.innerHeight - (footerTop - scrollPosition - bottomOffset);
       scrollTopBtn.style.bottom = `${distanceFromBottom + 30}px`;
     } else {
-
       scrollTopBtn.style.bottom = '60px';
     }
   } else {
@@ -203,10 +207,8 @@ function positionScrollButton() {
   }
 }
 
-
 window.addEventListener('scroll', positionScrollButton);
 window.addEventListener('resize', positionScrollButton);
-
 document.addEventListener('DOMContentLoaded', positionScrollButton);
 
 if (scrollTopBtn) {
