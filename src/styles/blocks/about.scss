@@ -218,7 +218,7 @@
 
     @include on-desktop {
       grid-column: 7/13;
-      gap: 20px;
+      gap: 17px;
     }
 
     @include on-fullhd {
@@ -254,6 +254,7 @@
     display: block;
     width: 62px;
     height: 253px;
+    object-fit: contain;
 
     @include on-desktop {
       width: 83px;
